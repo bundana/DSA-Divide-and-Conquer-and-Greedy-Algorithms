@@ -3,11 +3,18 @@
 
 #### Algorithm Comparison Application Report
 
-**Authors:** Group Members 
-
+**Authors:** Group Members
+1. 11126125 - Issaka Issifu 
+2. 11143832 - Bejir.T. Fobil 
+3. 11297426 - Aliya Kamal 
+4. 11129744 - Ebenezer Baafi 
+5. 11014006 - Korletey Christian Kwadjo 
+6. 11140508 - Sulemana Abdul-Haafiz Bundana 
+7. 11081933 - Agalisi Desmond
 
 ---
-
+#### Video Demo
+[Recording 2024-07-13 174305.mp4](Recording%202024-07-13%20174305.mp4)
 #### 1. Introduction
 
 This report presents the implementation and comparison of various Divide and Conquer and Greedy algorithms using Java. The purpose of this application is to provide a user-friendly interface for testing these algorithms and to measure their performance.
@@ -98,3 +105,4 @@ Future improvements could include:
 
 ---
  
+

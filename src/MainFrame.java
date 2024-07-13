@@ -22,13 +22,24 @@ public class MainFrame extends JFrame {
         JMenuBar menuBar = new JMenuBar();
         JMenu helpMenu = new JMenu("Help");
         JMenuItem howToUseItem = new JMenuItem("How to Use");
+        JMenuItem devTeamsItem = new JMenuItem("Developers");
+
         howToUseItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 showHelpDialog();
             }
         });
+
+        devTeamsItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showDevTeamsDialog();
+            }
+        });
+
         helpMenu.add(howToUseItem);
+        helpMenu.add(devTeamsItem);
         menuBar.add(helpMenu);
         setJMenuBar(menuBar);
 
@@ -178,6 +189,18 @@ public class MainFrame extends JFrame {
                         "3. Click the 'Run' button to execute the selected algorithm.\n" +
                         "4. View the results in the text area below.",
                 "How to Use", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    private void showDevTeamsDialog() {
+        JOptionPane.showMessageDialog(this,
+                "11126125 - Issaka Issifu\n" +
+                        "11143832 - Bejir.T. Fobil\n" +
+                        "11297426 - Aliya Kamal\n" +
+                        "11129744 - Ebenezer Baafi\n" +
+                        "11014006 - Korletey Christian Kwadjo\n" +
+                        "11140508 - Sulemana Abdul-Haafiz Bundana\n" +
+                        "11081933 - Agalisi Desmond",
+                "Developers", JOptionPane.INFORMATION_MESSAGE);
     }
 
     public static void main(String[] args) {
