@@ -1,17 +1,15 @@
 package algorithms.greedy;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class PrimMST {
-    private static final int INF = Integer.MAX_VALUE;
-
-    public void primMST(int[][] graph) {
+    public String primMST(int[][] graph) {
         int V = graph.length;
         int[] parent = new int[V];
         int[] key = new int[V];
         boolean[] mstSet = new boolean[V];
 
-        Arrays.fill(key, INF);
+        Arrays.fill(key, Integer.MAX_VALUE);
         key[0] = 0;
         parent[0] = -1;
 
@@ -27,11 +25,16 @@ public class PrimMST {
             }
         }
 
-        printMST(parent, graph);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Edge \tWeight\n");
+        for (int i = 1; i < V; i++) {
+            sb.append(parent[i]).append(" - ").append(i).append("\t").append(graph[i][parent[i]]).append("\n");
+        }
+        return sb.toString();
     }
 
     private int minKey(int[] key, boolean[] mstSet) {
-        int min = INF, minIndex = -1;
+        int min = Integer.MAX_VALUE, minIndex = -1;
 
         for (int v = 0; v < key.length; v++) {
             if (!mstSet[v] && key[v] < min) {
@@ -40,12 +43,5 @@ public class PrimMST {
             }
         }
         return minIndex;
-    }
-
-    private void printMST(int[] parent, int[][] graph) {
-        System.out.println("Edge \tWeight");
-        for (int i = 1; i < graph.length; i++) {
-            System.out.println(parent[i] + " - " + i + "\t" + graph[i][parent[i]]);
-        }
     }
 }
